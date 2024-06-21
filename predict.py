@@ -34,7 +34,7 @@ if st.button("Рассчитать"):
 
         data = np.array([list(i) for i in zip(temp, days)])
 
-        model = joblib.load(f"sarima\\sarima{reg}.joblib")
+        model = joblib.load(f"sarima{reg}.joblib")
 
 
         forecast = model.get_prediction(1, long, exog=data)
